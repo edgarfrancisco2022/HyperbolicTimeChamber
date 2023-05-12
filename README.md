@@ -123,5 +123,5 @@ Just a preview 👀. Checkout the [Live View](http://44.201.211.71) for more!
 #### Chronometer feature   
 ![alt text](https://github.com/edgarfrancisco2022/HyperbolicTimeChamber/blob/main/HyperbolicTmeChamber%20Chronometer.png)
    
-## Projects & Sessions
-![alt text]()   
+#### Projects & Sessions
+![alt text](https://github.com/edgarfrancisco2022/HyperbolicTimeChamber/blob/main/HyperbolicTimeChamber%20Sessions.png)   
