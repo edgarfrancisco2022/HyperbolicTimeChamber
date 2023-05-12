@@ -1,0 +1,8 @@
+//Session object JSON format
+
+{"id":null,"description":"session 1","startTime":[2023,1,26,2,0],"endTime":[2023,1,26,2,0,30],
+"totalTime":0.008333333333333333,"project":{"id":null,"name":"Project 1","totalTime":0.0,
+"totalSessions":0,"sessions":null},"sessionQuality":null}
+
+//User 1 password
+YK4f2JJTmS

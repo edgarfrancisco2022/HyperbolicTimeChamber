@@ -1,0 +1,64 @@
+<app-main-nav></app-main-nav>
+<app-chronometer></app-chronometer>
+<app-projects></app-projects>
+
+<!--------------- SAVE SESSION MODAL ------------------>
+
+<button type="button" class="btn btn-primary saveSessionModal" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Save Session?</h1>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+      </div>
+      <div class="modal-body">
+        <div class="session-description">
+          <div class="session-description-label">Description: </div>
+          <input type="text" class="session-description-input" [(ngModel)]="sessionDescription">
+        </div>
+        <div class="session-rating">
+          <div class="session-rating-label">Quality:</div>
+          <div class="session-rating-stars">
+            <span class="material-symbols-outlined star star1" (click)="onStar1Clicked(5)"
+                  [ngClass]="{starActive: starRatingActiveOrInactive.star1}">
+              star_rate
+            </span>
+            <span class="material-symbols-outlined star star2" (click)="onStar1Clicked(4)"
+                  [ngClass]="{starActive: starRatingActiveOrInactive.star2}">
+              star_rate
+            </span>
+            <span class="material-symbols-outlined star star3" (click)="onStar1Clicked(3)"
+                  [ngClass]="{starActive: starRatingActiveOrInactive.star3}">
+              star_rate
+            </span>
+            <span class="material-symbols-outlined star star4" (click)="onStar1Clicked(2)"
+                  [ngClass]="{starActive: starRatingActiveOrInactive.star4}">
+              star_rate
+            </span>
+            <span class="material-symbols-outlined star star5" (click)="onStar1Clicked(1)"
+                  [ngClass]="{starActive: starRatingActiveOrInactive.star5}">
+              star_rate
+            </span>
+          </div>
+        </div>
+        <div></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary do-not-save-session-btn"
+                data-bs-dismiss="modal"
+                (click)="onDoNotSaveSessionClicked()"
+                >Do not save session</button>
+        <button type="button" class="btn btn-primary save-session-btn"
+                data-bs-dismiss="modal"
+                [disabled]="isSaveSessionButtonDisabled()"
+                (click)="onSaveSessionClicked()"
+                >Save session</button>
+      </div>
+    </div>
+  </div>
+</div>

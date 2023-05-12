@@ -1,0 +1,38 @@
+
+<div class="chamber-box">
+  <div class="project-selection">
+    <div class="dropdown">
+      <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <span class="dropdown-toggle-left">{{ latestProjectSelected }}</span>
+        <span class="dropdown-toggle-right"></span>
+      </button>
+      <ul class="dropdown-menu project-selection-dropdown">
+        <div class="project-to-select" *ngFor="let project of projects; let j = index">
+          <li (click)="onSelectProject(project.name)"><a class="dropdown-item">{{project.name}}</a></li>
+        </div>
+
+      </ul>
+    </div>
+  </div>
+  <div class="chronometer">
+    <div>{{hours}}:</div>
+    <div>{{minutes}}:</div>
+    <div>{{seconds}}</div>
+    <!-- <div>{{milliseconds}}</div> -->
+  </div>
+
+  <div class="chamber-buttons">
+    <button class="btn btn-outline-light chamber-btn" (click) = "start()">Train</button>
+    <button class="btn btn-outline-light chamber-btn" (click) = "stop()">Sleep</button>
+    <button class="btn btn-outline-light chamber-btn" (click) = "reset()">Exit</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,125 @@
+<div class="create-project" (click)="onCreateProjectClicked()">
+  <div class="dropdown create-project-button">
+    <button type="button" class="btn btn-sm btn-outline-light dropdown-toggle"
+    id="createNewProjectToggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" [disabled]="!isUserLoggedIn"
+    >
+      Create project
+    </button>
+    <form class="dropdown-menu p-4 create-project-dropdown"
+      #createNewProjectForm="ngForm" (ngSubmit)="onSubmitNewProject(createNewProjectForm)"
+    >
+      <div class="mb-3">
+        <input type="email" class="form-control create-project-dropdown-input" id="projectName" placeholder="Project name"
+        name="projectName" required ngModel #projectName="ngModel"
+        >
+      </div>
+      <button type="submit" class="btn btn-sm btn-outline-light">Create</button>
+    </form>
+  </div>
+</div>
+
+<div class="project-wrapper">
+  <div class="project" *ngFor="let project of allProjects; let i = index">
+    <div class="project-info">
+      <span class="material-symbols-outlined project-icon">
+        folder
+      </span>
+      <div class="project-name">{{ project.name }}</div>
+      <span class="material-symbols-outlined project-icon-sessions" title="Total number of sessions">
+        checklist
+      </span>
+      <div class="project-total-sessions">{{ project.sessions.length }}</div>
+      <span class="material-symbols-outlined project-icon-time" title="Total time">
+        hourglass_empty
+      </span>
+      <div class="project-total-time">{{ formatTotalTime(project.totalTime) }}</div>
+      <span class="material-symbols-outlined project-icon-expand" title="Expand"
+      (click)="onProjectExpandButtonClicked(project)">
+        expand_more
+      </span>
+    </div>
+
+    <div class="sessions-wrapper">
+      <div class="sessions" *ngFor="let session of project.sessions; let j = index"
+        [ngClass]="{hideSession: project.hideSession}">
+        <div class="sessions-header">
+          <div class="sessions-header-description">
+            <span class="material-symbols-outlined checkbox">
+              check_box
+            </span>
+            <div class="sessions-header-description-title">{{ session.description }}</div>
+          </div>
+          <div class="sessions-header-number">
+            <span class="material-symbols-outlined tag">
+              tag
+            </span>
+            <div class="sessions-header-number-id">{{ j + 1 }}</div>
+          </div>
+          <div class="sessions-header-rating">
+            <span class="material-symbols-outlined star"
+                  *ngFor="let j of generateSessionQualityIterable(session.sessionQuality)">
+              star_rate
+            </span>
+            <span class="material-symbols-outlined starNoFill"
+                  *ngFor="let j of generateSessionQualityIterableNoFill(session.sessionQuality)">
+              star_rate
+            </span>
+          </div>
+        </div>
+        <div class="sessions-body">
+          <div class="sessions-body-startTime">
+            <div class="sessions-body-startTime-icons">
+              <span class="material-symbols-outlined sessions-body-icon">
+                line_start
+              </span>
+              <span class="material-symbols-outlined sessions-body-icon">
+                schedule
+              </span>
+            </div>
+            <div class="sessions-body-startTime-time">
+              <div>{{ getSessionStartDateDate(session) }}</div>
+              <div>{{ getSessionStartDateTime(session) }}</div>
+            </div>
+          </div>
+          <div class="sessions-body-endTime">
+            <div class="sessions-body-endTime-icons">
+              <span class="material-symbols-outlined sessions-body-icon">
+                line_end
+              </span>
+              <span class="material-symbols-outlined sessions-body-icon">
+                schedule
+              </span>
+            </div>
+            <div class="sessions-body-endTime-time">
+              <div>{{ getSessionEndDateDate(session) }}</div>
+              <div>{{ getSessionEndDateTime(session) }}</div>
+            </div>
+          </div>
+          <div class="sessions-body-totalTime">
+            <span class="material-symbols-outlined sessions-body-icon">
+              hourglass_empty
+            </span>
+            <div class="sessions-body-totalTime-time">{{ formatTotalSessionTime(session) }}</div>
+          </div>
+          <div class="sessions-body-delete">
+            <span class="material-symbols-outlined sessions-body-delete-icon"
+              (click)="onDeleteSessionButtonClicked(project, session, j)">
+              delete
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-delete-project" [ngClass]="{hideSession: project.hideSession}"
+      *ngIf="i !== 0">
+      <button type="button" class="btn btn-danger btn-sm project-delete-project-btn"
+        (click)="onDeleteProjectBtnClicked(project, i)">Delete Project</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

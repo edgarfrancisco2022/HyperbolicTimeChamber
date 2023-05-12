@@ -1,0 +1,149 @@
+/* Save session modal */
+.saveSessionModal {
+  display: none;
+}
+
+.modal-content {
+  color: var(--color-primary-dark);
+}
+
+.session-description {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  font-size: 1.2rem;
+  padding-inline: 2rem;
+  align-items: center;
+}
+
+.session-description-label {
+  padding-bottom: 2px;
+}
+
+.session-description-input {
+  border-radius: 5px;
+  border: solid 1px var(--color-secondary-dark);
+}
+
+.session-description-input:focus {
+  outline: solid 2px var(--color-secondary-dark);
+  border: solid 1px transparent;
+  border-radius: 5px;
+}
+
+.session-rating {
+  font-size: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-top: 1rem;
+  padding-inline: 2rem;
+}
+
+.star {
+  color: var(--color-secondary-dark);
+  font-variation-settings:
+  'FILL' 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.session-rating-stars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-self: flex-start;
+}
+
+.star1:hover,
+.star1:hover ~ .star2,
+.star1:hover ~ .star3,
+.star1:hover ~ .star4,
+.star1:hover ~ .star5 {
+  font-variation-settings:
+  'FILL' 1;
+}
+
+.starActive {
+  font-variation-settings:
+  'FILL' 1;
+}
+
+.star2:hover,
+.star2:hover ~ .star3,
+.star2:hover ~ .star4,
+.star2:hover ~ .star5 {
+  font-variation-settings:
+  'FILL' 1;
+}
+
+.star3:hover,
+.star3:hover ~ .star4,
+.star3:hover ~ .star5 {
+  font-variation-settings:
+  'FILL' 1;
+}
+
+.star4:hover,
+.star4:hover ~ .star5 {
+  font-variation-settings:
+  'FILL' 1;
+}
+
+.star5:hover {
+  font-variation-settings:
+  'FILL' 1;
+}
+
+.do-not-save-session-btn {
+  background-color: #393e4676;
+  outline: none;
+}
+
+.do-not-save-session-btn:hover {
+  background-color: #393e46a3;
+  outline: none;
+}
+
+.save-session-btn {
+  background-color:  #00ADB5;
+  outline: none;
+}
+
+.save-session-btn:hover {
+  background-color: #048f97;
+  outline: none;
+}
+
+[disabled] {
+  background-color: #00acb5d4;
+  outline: none;
+}
+
+[disabled]:hover {
+  background-color: #00acb5d4;
+  outline: none;
+}
+
+@media(max-width: 450px) {
+  .modal-title {
+    font-size: 1rem !important;
+    padding-inline: 0.3rem !important;
+  }
+  .session-rating,
+  .session-description {
+    font-size: 0.9rem;
+    padding-inline: 0.2rem !important;
+    gap: 5px;
+    justify-content: space-between;
+  }
+  .session-rating-stars {
+    justify-self: flex-end;
+  }
+  .session-description-input {
+    width: 100%;
+    height: 1.25rem;
+  }
+  .do-not-save-session-btn,
+  .save-session-btn {
+    font-size: 0.9rem;
+  }
+}
+

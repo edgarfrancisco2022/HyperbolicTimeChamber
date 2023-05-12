@@ -1,0 +1,36 @@
+<div class="nav-wrapper">
+  <nav class="main-nav">
+    <h5 class="logo">
+      <span class="material-symbols-outlined material-symbols-outlined-logo">
+        hourglass_empty
+      </span>
+      <span class="logo-name">HyperbolicTimeChamber</span>
+      <span class="material-symbols-outlined material-symbols-outlined-logo">
+        hourglass_empty
+      </span>
+    </h5>
+    <span class="buttons">
+      <button disabled type="button" class="btn btn-outline-light btn-sm font-sm settings-btn btn-margin-right-sm" (mouseenter)="onMouseEnterNavBtn()">
+        <span class="material-symbols-outlined material-symbols-outlined-login">
+          settings
+        </span>
+        <span>
+          Settings
+        </span>
+      </button>
+      <button type="button" class="btn btn-outline-light btn-sm font-sm login-btn"
+        (mouseenter)="onMouseEnterNavBtn()"
+        (click)="onLoginLogoutBtnClicked()"
+      >
+        <span class="material-symbols-outlined material-symbols-outlined-settings">
+          account_circle
+        </span>
+        <span>
+          {{isUserLoggedIn ? 'Logout' : 'Login'}}
+        </span>
+      </button>
+    </span>
+  </nav>
+</div>
+
+

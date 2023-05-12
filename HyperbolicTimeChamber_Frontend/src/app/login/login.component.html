@@ -1,0 +1,37 @@
+<div class="title-wrapper">
+  <span class="material-symbols-outlined title-icon">hourglass_empty</span>
+  <div class="title" routerLink="/main">HyperbolicTimeChamber</div>
+  <span class="material-symbols-outlined title-icon">hourglass_empty</span>
+</div>
+
+<div class="registration-form-wrapper">
+  <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm.value)">
+    <div class="registration-title">
+      <h4>Get started!</h4>
+      <span class="material-symbols-outlined registration-icon">how_to_reg</span>
+    </div>
+
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input type="email" class="form-control" id="username" name="username" aria-describedby="emailHelp"
+      required ngModel #username="ngModel"
+      >
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="email" class="form-control" id="password" name="password" aria-describedby="emailHelp"
+      required ngModel #password="ngModel"
+      >
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <div class="registration-link">
+    Don't have an account?
+    <a routerLink="/register">Register here!</a>
+  </div>
+  <div class="demo-acount">
+    Or sign in with our
+    <a class="demo-acount-link" (click)="demoAccountLogin()">Demo Acount.</a>
+  </div>
+</div>

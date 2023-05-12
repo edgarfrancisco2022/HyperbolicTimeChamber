@@ -1,0 +1,45 @@
+<div class="title-wrapper">
+  <span class="material-symbols-outlined title-icon">hourglass_empty</span>
+  <div class="title" routerLink="/main">HyperbolicTimeChamber</div>
+  <span class="material-symbols-outlined title-icon">hourglass_empty</span>
+</div>
+
+<div class="registration-form-wrapper">
+  <form #registrationForm="ngForm" (ngSubmit)="onRegister(registrationForm.value, registrationForm)"
+  >
+    <div class="registration-title">
+      <h4>Get started!</h4>
+      <span class="material-symbols-outlined registration-icon">how_to_reg</span>
+    </div>
+
+    <div class="mb-3">
+      <label for="firstName" class="form-label">First Name</label>
+      <input type="email" class="form-control" id="firstName" name="firstName" aria-describedby="emailHelp"
+      required ngModel #firstName="ngModel"
+      >
+    </div>
+    <div class="mb-3">
+      <label for="lastName" class="form-label">Last Name</label>
+      <input type="email" class="form-control" id="lastName" name="lastName" aria-describedby="emailHelp"
+      required ngModel #lastName="ngModel"
+      >
+    </div>
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input type="email" class="form-control" id="username" name="username" aria-describedby="emailHelp"
+      required ngModel #username="ngModel"
+      >
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
+      required ngModel #email="ngModel"
+      >
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <div *ngIf="accountCreated" class="registration-successful form-text">Registration succesful! Please check your email to get your login password. 🔑</div>
+  </form>
+</div>
+

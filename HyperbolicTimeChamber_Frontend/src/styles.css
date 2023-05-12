@@ -1,0 +1,45 @@
+/* Global Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  line-height: 1;
+}
+
+:root {
+  --color-primary: #393E46;
+  --color-primary-dark: #222831;
+  --color-secondary: #EEEEEE;
+  --color-secondary-dark: #00ADB5;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+body {
+  background-color: var(--color-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0;
+}
+
+.font-sm {
+  font-size: 1rem;
+}
+
+.btn-light {
+  color: var(--color-primary-dark) !important;
+}
+

@@ -1,0 +1,130 @@
+div {
+  color: white;
+  text-align: center;
+}
+
+/* chamber*/
+.chamber-box {
+  /* width: 40%; */
+  width: 35rem;
+  height: 20rem;
+  background-color: var(--color-primary-dark);
+  border-radius: 5px;
+  margin-top: 2rem;
+  margin-inline: auto;
+  padding: 1.5rem;
+  box-shadow: rgba(72, 114, 132, 0.12) 0px 2px 4px 0px, rgba(58, 96, 113, 0.32) 0px 2px 16px 0px;
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
+}
+
+@media (max-width: 800px) {
+  .chamber-box {
+    width: 30rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .chamber-box {
+    height: 17rem;
+    width: 25rem;
+  }
+}
+
+@media (max-width: 525px) {
+  .chamber-box {
+    height: 15rem;
+    width: 20rem;
+  }
+}
+
+.project-selection {
+  justify-self: end;
+}
+
+@media (max-width: 650px) {
+  .project-selection {
+    justify-self: start;
+  }
+}
+
+.dropdown-toggle {
+  min-width: 8rem;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+
+.project-selection-dropdown {
+  background-color: var(--color-secondary-dark);
+
+}
+
+.project-selection-dropdown .dropdown-item {
+  color: var(--color-secondary);
+}
+
+.project-selection-dropdown .dropdown-item:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.project-to-select {
+  text-align: left;
+}
+
+.chronometer {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  font-family: serif;
+  font-weight: bold;
+  font-size: 7rem;
+  align-self: center;
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 650px) {
+  .chronometer {
+    font-size: 6rem;
+    padding-bottom: 1.2rem;
+  }
+}
+
+@media (max-width: 525px) {
+  .chronometer {
+    font-size: 4.5rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.chamber-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.chamber-btn {
+  width: 25%;
+}
+
+@media (max-width: 800px) {
+  .chamber-btn {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .chamber-btn {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 525px) {
+  .chamber-btn {
+    font-size: 0.85rem;
+  }
+}
+
