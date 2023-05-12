@@ -1,7 +1,7 @@
 # HyperbolicTimeChamber
 A Responsive Full Stack Productivity App 💻 - Junior Portfolio Project #2
 <br>
-Checkout the [Live View!](http://44.201.211.71)!
+Checkout the [Live View](http://44.201.211.71)!
 
 ## Reason
 HyperbolicTimeChamber is a simple productivity app based on the idea that tracking the time one spends working on one's projects and goals is one of the best ways to stay productive in the long run. It can be seen as the opposite of techniques such as the "Pomodoro Technique", which focus on short term productivity, and a response to complex productivity apps, which focus on micro-managing every aspect of a project or personal goal.
@@ -118,7 +118,9 @@ In building this app we encountered three major challenges.
 ## EER Diagram
 ![alt text](https://github.com/edgarfrancisco2022/HyperbolicTimeChamber/blob/main/HyperbolicTimeChamber%20EER%20Diagram.png?raw=true)
 
-## Chronometer feature screenshot
-Just a preview 👀. Checkout the [Live View!](http://44.201.211.71) for more!
-
+Just a preview 👀. Checkout the [Live View](http://44.201.211.71) for more!   
+## Chronometer feature preview
 ![alt text](https://github.com/edgarfrancisco2022/HyperbolicTimeChamber/blob/main/HyperbolicTmeChamber%20Chronometer.png)
+   
+## Projects & Sessions view
+![alt text](https://github.com/edgarfrancisco2022/HyperbolicTimeChamber/blob/main/HyperbolicTmeChamber%20Chronometer.png)   
