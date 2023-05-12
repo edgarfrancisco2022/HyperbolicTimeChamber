@@ -7,7 +7,7 @@ Checkout the [Live View](http://44.201.211.71)!
 HyperbolicTimeChamber is a simple productivity app based on the idea that tracking the time one spends working on one's projects and goals is one of the best ways to stay productive in the long run. It can be seen as the opposite of techniques such as the "Pomodoro Technique", which focus on short term productivity, and a response to complex productivity apps, which focus on micro-managing every aspect of a project or personal goal.
 
 ## Description
-Projects can be created where productivity sessions may be added. Session duration, session description, session quality, and session start and end times are recorded in a session. Each project tracks its number of sessions and the total amount of time. A chronometer is used to track the session time. 
+Projects can be created where sessions may be added. Session duration, session description, session quality, and session start and end times are recorded in a session. Each project tracks its number of sessions and the total amount of time. A chronometer is used to track the session time. 
 
 ## Challenges
 In building this app we encountered three major challenges.
