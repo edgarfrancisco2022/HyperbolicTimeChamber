@@ -18,7 +18,7 @@ In building this app we encountered three major challenges.
 ## Solutions
 1. Two services were created in the frontend to keep the data, one for the Demo Project and one for all projects (including both the Demo Project and projects stored in the database). This made Demo Project, which had to be linked to the project stored in local storage more managable.
 2. Use of Angular Observables from Angular RxJS, specifically BehaviorSubject\<boolean\>, which were kept in services, and to which components subscribe upon component initiation turned out to be a simple and "clean" solution to the problem of Intercomponent Communication.
-3. A "brute force" solution was implemented the managing of project state problem. We used boolean variables to indicate which type of user action to handle, and using if statements we created a slightly different implementation for each. This is might not the cleanest solution, but in th eend we were relieved that worked: 
+3. A "brute force" solution was implemented for the managing of project state problem. We used boolean variables to indicate which type of user action to handle, and using if statements we created a slightly different implementation for each. This is might not the cleanest solution, but in th eend we were relieved that worked: 
   
   ```getAllProjects(user: User) {
     this.projectsService.getAllProjects(user).subscribe(
