@@ -116,7 +116,7 @@ In building this app we encountered three major challenges.
 10. Project state (expanded or collapsed) tracking.    
 
 ## EER Diagram
-![alt text](HyperbolicTimeChamber EER Diagram.png)
+![alt text](https://github.com/edgarfrancisco2022/HyperbolicTimeChamber/blob/main/HyperbolicTimeChamber%20EER%20Diagram.png?raw=true)
 
 ## Search feature screenshot
 Just a preview 👀. Checkout the live view for more!
