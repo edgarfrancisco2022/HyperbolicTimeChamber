@@ -20,12 +20,13 @@ In building this app we encountered three major challenges.
 
 ## Solutions
 1. Two services were created in the frontend to keep the data, one for the Demo Project and one for all projects (including both the Demo
-   Project and projects stored in the database). This made Demo Project, which had to be linked to the project stored in local storage      more managable.
-2. Use of Angular Observables from Angular RxJS, specifically BehaviorSubject<boolean>, which were kept in services, and to which 
+   Project and projects stored in the database). This made Demo Project, which had to be linked to the project stored in local storage 
+   more managable.
+2. Use of Angular Observables from Angular RxJS, specifically BehaviorSubject<<boolean>>, which were kept in services, and to which 
    components subscribe upon component initiation turned out to be a simple and "clean" solution to the problem of Intercomponent  
    Communication.
 3. A "brute force" solution was implemented to solve this problem. We used boolean variables to indicate which type of user action to 
-   handle, and using if statements we created a slightly different implementation for each. This is might not the cleanest solution, but    we were relieved that in the end it worked.
+   handle, and using if statements we created a slightly different implementation for each. This is might not the cleanest solution, but    we were relieved that in the end it worked: 
   
   ```getAllProjects(user: User) {
     this.projectsService.getAllProjects(user).subscribe(
@@ -102,26 +103,16 @@ In building this app we encountered three major challenges.
 1. AWS EC2
 
 ## Features
-1. Creating book items (multiple authors/tags).
-2. Retrieving book items.
-3. Updating book items.
-4. Deleting book items (with confirmation modal). 
-5. Creating list items.
-6. Adding book items to list items (with add to list modal).
-7. Deleting book items from list items.
-8. Deleting list items (with confirmation modal).
-9. Statitics page.
-10. User registration.
-11. User login.
-12. User logout.
-13. Simple search by field (for book search).
-14. Advanced search with autocomplete (for list search).
-15. Search results card view.
-16. Search results detail view.
-17. Pagination (when retrieving all books).
-18. Form validation.
-19. Security with JWT.
-20. Fully responsive.
+1. Demo Project in local storage.
+2. Creating projects (database only).
+3. Deleting projects (database only).
+4. Creating Sessions.
+5. Save session modal.
+6. Deleting Sessions.
+7. Chronometer functionality.
+8. User registration.
+9. User login.
+10. Project state (expanded or collapsed) tracking.    
 
 ## EER Diagram
 ![alt text](https://raw.githubusercontent.com/edgarfrancisco2022/myBooks_app/main/MyBooks%20EER%20Diagram.png)
