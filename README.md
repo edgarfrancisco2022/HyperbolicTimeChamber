@@ -81,7 +81,8 @@ In building this app we encountered three major challenges.
         this.onDbProjectsUpdated(true);
       }
     );
-  }```
+  }
+  ```
 
 ## Tech Stack
 ##### Backend
