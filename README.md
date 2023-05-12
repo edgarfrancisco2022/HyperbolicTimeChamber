@@ -121,5 +121,5 @@ In building this app we encountered three major challenges.
 ## Chronometer feature screenshot
 Just a preview 👀. Checkout the [Live View!](http://44.201.211.71) for more!
 
-![alt text](![image](https://github.com/edgarfrancisco2022/HyperbolicTimeChamber/assets/101810702/840a7382-4718-415d-be8e-cec0b5df0ce6)
+![alt text](![image](https://github.com/edgarfrancisco2022/HyperbolicTimeChamber/blob/main/HyperbolicTmeChamber%20Chronometer.png?raw=true)
 )
