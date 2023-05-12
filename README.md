@@ -118,7 +118,8 @@ In building this app we encountered three major challenges.
 ## EER Diagram
 ![alt text](https://github.com/edgarfrancisco2022/HyperbolicTimeChamber/blob/main/HyperbolicTimeChamber%20EER%20Diagram.png?raw=true)
 
-## Search feature screenshot
-Just a preview 👀. Checkout the live view for more!
+## Chronometer feature screenshot
+Just a preview 👀. Checkout the [Live View!](http://44.201.211.71) for more!
 
-![alt text](https://github.com/edgarfrancisco2022/myBooks_app/blob/main/search%20feature%20screenshot.png?raw=true)
+![alt text](![image](https://github.com/edgarfrancisco2022/HyperbolicTimeChamber/assets/101810702/840a7382-4718-415d-be8e-cec0b5df0ce6)
+)
