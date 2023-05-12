@@ -13,7 +13,7 @@ Projects can be created where sessions may be added. Session duration, session d
 In building this app we encountered three major challenges.
 1. Keeping a "Demo Project" in local storage while keeping all created projects in a database. This made the frontend logic a lot more complex than initially expected.
 3. Intercomponent Communication. For each major user action, events have to travel through several components and services, this also proved to be more difficult than initially expected. 
-5. Saving the state of each project (expanded or collapsed), as each user action, from logging in, to adding and deleting a session, to creating or deleting a project required a slightly different implementation.
+5. Saving the state of each project (expanded or collapsed), as each user action, from logging in, to adding and deleting a session, to creating or deleting a project, required a slightly different implementation.
 
 ## Solutions
 1. Two services were created in the frontend to keep the data, one for the Demo Project and one for all projects (including both the Demo Project and projects stored in the database). This made Demo Project, which had to be linked to the project stored in local storage more managable.
