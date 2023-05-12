@@ -116,7 +116,7 @@ In building this app we encountered three major challenges.
 10. Project state (expanded or collapsed) tracking.    
 
 ## EER Diagram
-![alt text](https://raw.githubusercontent.com/edgarfrancisco2022/myBooks_app/main/MyBooks%20EER%20Diagram.png)
+![alt text](HyperbolicTimeChamber EER Diagram.png)
 
 ## Search feature screenshot
 Just a preview 👀. Checkout the live view for more!
