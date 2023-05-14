@@ -102,10 +102,11 @@ In building this app we encountered three major challenges.
 4. Creating Sessions.
 5. Save session modal.
 6. Deleting Sessions.
-7. Chronometer functionality.
-8. User registration.
-9. User login.
-10. Project state tracking [expanded or collapsed].    
+7. Project selection.
+8. Chronometer functionality.
+9. User registration.
+10. User login.
+11. Project state tracking [expanded or collapsed].    
 
 ## EER Diagram
 ![alt text](https://github.com/edgarfrancisco2022/HyperbolicTimeChamber/blob/main/HyperbolicTimeChamber%20EER%20Diagram.png?raw=true)
