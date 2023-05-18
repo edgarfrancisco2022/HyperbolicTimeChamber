@@ -106,7 +106,8 @@ In building this app we encountered three major challenges.
 8. Chronometer functionality.
 9. User registration.
 10. User login.
-11. Project state tracking [expanded or collapsed].    
+11. Project state tracking [expanded or collapsed].
+12. Fully responsive.    
 
 ## EER Diagram
 ![alt text](https://github.com/edgarfrancisco2022/HyperbolicTimeChamber/blob/main/HyperbolicTimeChamber%20EER%20Diagram.png?raw=true)
