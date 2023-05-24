@@ -18,63 +18,7 @@ In building this app we encountered three major challenges.
 ## Solutions
 1. Two Angular services were created in the frontend to keep the data, one for the Demo Project and one for all projects (including both the Demo Project and projects stored in the database). This made the Demo Project, which also had to be linked to the project stored in local storage, more managable.
 2. Use of Angular Observables from Angular RxJS, specifically BehaviorSubject\<boolean\>, which were kept in dedicated services, and to which components subscribe upon component initiation, turned out to be a simple and "clean" solution to the problem of Intercomponent Communication.
-3. A "brute force" solution was implemented to solve the project state management problem. We used boolean variables to indicate which type of user action to handle, and using if statements we created a slightly different implementation for each. This is might not the cleanest solution, but in the end we were relieved that worked: 
-  
-  ```getAllProjects(user: User) {
-    this.projectsService.getAllProjects(user).subscribe(
-      (projects: Project[]) => {
-        if (this.authenticationService.isUserLoggedIn() && this.dbProjects.length === 1) {
-          // first check if it is an update
-          if (this.checkProjectExpanded) {
-            // update the state of the project [expanded or not]
-            // case project deletion - set hideSession to last state;
-            if (this.handleProjectDeletion) {
-              for (let i = 0; i < projects.length; i++) {
-                projects[i].hideSession = this.projectsExpandedState[i + 1];
-                this.dbProjects.push(projects[i]);
-              }
-              this.handleProjectDeletion = false;
-
-            // case creation or deletion of session - set hideSession to last state;
-            } else if (this.handleNewSession) {
-              for (let i = 0; i < projects.length; i++) {
-                projects[i].hideSession = this.projectsExpandedState[i + 1];
-                this.dbProjects.push(projects[i]);
-              }
-              this.handleNewSession = false;
-
-            // case new project - set new project's hideSession to true
-            } else {
-              for (let i = 0; i < projects.length; i++) {
-                if (i === projects.length - 1) {
-                  projects[i].hideSession = true;
-                  this.dbProjects.push(projects[i]);
-                } else {
-                  projects[i].hideSession = this.projectsExpandedState[i + 1];
-                  this.dbProjects.push(projects[i]);
-                }
-              }
-            }
-
-            this.checkProjectExpanded = false;
-          // else case is triggered when logging in;
-          } else {
-            projects.forEach(p => {
-              p.hideSession = true;
-              this.dbProjects.push(p)
-            });
-          }
-        }
-      },
-      (error: HttpErrorResponse) => {
-        console.log(error);
-      },
-      () => {
-        this.onDbProjectsUpdated(true);
-      }
-    );
-  }
-  ```
+3. A "brute force" solution was implemented to solve the project state management problem. We used boolean variables to indicate which type of user action to handle, and using if statements we created a slightly different implementation for each. 
 
 ## Tech Stack
 ##### Backend
