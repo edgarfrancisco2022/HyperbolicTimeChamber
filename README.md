@@ -1,8 +1,6 @@
 # HyperbolicTimeChamber
-A Responsive Full Stack Productivity App 💻 - Junior Portfolio Project #2
+A Responsive Full Stack Productivity App 💻 - Junior Portfolio Project #2 [Live view currently unavailable]
 <br>
-
-## Reason
 HyperbolicTimeChamber is a simple productivity app based on the idea that tracking the time one spends working on one's projects and goals is helpful to stay productive in the long run.
 
 ## Description
